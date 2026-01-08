@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "sao_interface",
+	"version": "${version}",
+	"name": "SAO Interface",
+	"description": "Adds Sword Art Online style interface to Minecraft.",
+	"authors": [
+		"Takyara"
+	],
+	"contact": {
+		"homepage": "takyara.github.io/html/mods.html",
+		"sources": "https://github.com/takyara/sao_interface_mod"
+	},
+	"license": "LGPL-3.0",
+	"icon": "assets/sao_interface/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"main": [
+			"com.takyara.sao_interface.Sao_interface"
+		],
+		"client": []
+	},
+	"mixins": [
+		"sao_interface.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+    	"another-mod": "*"
+  }
+}
