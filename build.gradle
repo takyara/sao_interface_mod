@@ -81,3 +81,13 @@ publishing {
 		// retrieving dependencies.
 	}
 }
+
+tasks.register('copyToMods', Copy) {
+    dependsOn build
+    from("build/libs/${project.archives_base_name}-${project.mod_version}.jar")
+    into(project.findProperty('mods_output_dir') ?: 'build/libs')
+    
+    doLast {
+        println "Mod copié vers: ${project.mods_output_dir}"
+    }
+}
